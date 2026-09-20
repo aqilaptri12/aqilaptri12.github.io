@@ -3,694 +3,702 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Aqila Putri | Software QA Engineer</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons -->
+    <title>Aqila Putri — Software QA Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <style>
+        /* ---------- RESET & VARIABLES ---------- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         :root {
-            --primary: #4f46e5;
-            --primary-hover: #4338ca;
-            --primary-light: #eef2ff;
-            --secondary: #0f172a;
-            --text-main: #334155;
-            --text-muted: #64748b;
-            --bg-body: #f8fafc;
-            --card-bg: #ffffff;
-            --border-color: #e2e8f0;
-            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --ink: #1a1f2e;
+            --ink-soft: #4a5266;
+            --muted: #8b93a7;
+            --line: #e8ebf0;
+            --bg: #f4f6fa;
+            --card: #ffffff;
+            --accent: #2563eb;
+            --accent-soft: #eff4ff;
+            --accent-line: #c7d9ff;
+            --highlight: #0f172a;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-body);
-            color: var(--text-main);
-            line-height: 1.6;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.65;
+            font-size: 15px;
+            -webkit-font-smoothing: antialiased;
             padding: 40px 20px;
         }
 
-        .container {
-            max-width: 960px;
+        /* ---------- PAGE WRAPPER ---------- */
+        .page {
+            max-width: 860px;
             margin: 0 auto;
-            background: var(--card-bg);
-            border-radius: 20px;
-            box-shadow: var(--shadow-lg);
+            background: var(--card);
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04),
+                        0 20px 60px -20px rgba(15, 23, 42, 0.12);
             overflow: hidden;
-            border: 1px solid var(--border-color);
         }
 
-        /* Hero Header */
-        header {
-            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);
-            color: #ffffff;
-            padding: 50px 40px;
+        /* ---------- HEADER ---------- */
+        .header {
+            padding: 48px 52px 40px;
+            border-bottom: 1px solid var(--line);
             position: relative;
         }
 
-        .header-content {
-            position: relative;
-            z-index: 2;
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent) 0%, #60a5fa 100%);
         }
 
-        h1 {
-            font-size: 2.5rem;
+        .name {
+            font-size: 2.4em;
             font-weight: 800;
-            letter-spacing: -0.025em;
-            margin-bottom: 8px;
-            color: #ffffff;
+            letter-spacing: -0.03em;
+            color: var(--highlight);
+            line-height: 1.1;
         }
 
-        .role-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            color: #e0e7ff;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.95rem;
+        .name span { color: var(--accent); }
+
+        .role {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 12px;
+            font-size: 0.95em;
             font-weight: 600;
-            margin-bottom: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--ink-soft);
+            letter-spacing: 0.02em;
         }
 
-        .contact-info {
+        .role .dot {
+            width: 6px; height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .contact {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
-            font-size: 0.9rem;
-            color: #c7d2fe;
+            gap: 8px 22px;
+            margin-top: 24px;
+            font-size: 0.9em;
+            color: var(--ink-soft);
         }
 
-        .contact-info a {
-            color: #c7d2fe;
+        .contact a {
+            color: var(--ink-soft);
             text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
             transition: color 0.2s;
         }
 
-        .contact-info a:hover {
-            color: #ffffff;
-            text-decoration: underline;
+        .contact a:hover { color: var(--accent); }
+
+        .contact i {
+            color: var(--accent);
+            font-size: 0.85em;
+            width: 14px;
+            text-align: center;
         }
 
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
+        /* ---------- MAIN BODY ---------- */
+        .body { padding: 40px 52px 52px; }
 
-        .contact-item i {
-            color: #818cf8;
-        }
-
-        /* Action Buttons (Print/PDF) */
-        .actions {
-            position: absolute;
-            top: 30px;
-            right: 40px;
-            display: flex;
-            gap: 10px;
-        }
-
-        .btn-action {
-            background: rgba(255, 255, 255, 0.2);
-            color: #fff;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            padding: 8px 16px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.85rem;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            transition: all 0.2s;
-        }
-
-        .btn-action:hover {
-            background: #ffffff;
-            color: var(--primary);
-        }
-
-        /* Main Body Layout */
-        .main-content {
-            padding: 40px;
-        }
-
-        section {
-            margin-bottom: 40px;
-        }
-
-        section:last-child {
-            margin-bottom: 0;
-        }
+        section { margin-bottom: 40px; }
+        section:last-child { margin-bottom: 0; }
 
         .section-title {
+            font-size: 0.78em;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
             gap: 12px;
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: var(--secondary);
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--primary-light);
         }
 
-        .section-title i {
-            color: var(--primary);
-            background: var(--primary-light);
-            width: 36px;
-            height: 36px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            font-size: 1rem;
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--line);
         }
 
-        .summary-text {
-            color: var(--text-main);
-            font-size: 0.98rem;
-            line-height: 1.7;
+        /* Summary */
+        .summary {
+            color: var(--ink-soft);
+            font-size: 0.96em;
+            line-height: 1.75;
         }
 
-        /* Work Experience Timeline */
-        .timeline {
+        .summary strong { color: var(--ink); font-weight: 600; }
+
+        /* ---------- EXPERIENCE ---------- */
+        .exp {
             position: relative;
-            padding-left: 20px;
-            border-left: 2px solid #e2e8f0;
-            margin-left: 10px;
+            padding-left: 28px;
+            padding-bottom: 4px;
+            margin-bottom: 32px;
         }
 
-        .timeline-item {
-            position: relative;
-            margin-bottom: 35px;
-        }
+        .exp:last-child { margin-bottom: 0; }
 
-        .timeline-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .timeline-dot {
+        .exp::before {
+            content: '';
             position: absolute;
-            left: -27px;
-            top: 4px;
-            width: 12px;
-            height: 12px;
+            left: 6px;
+            top: 8px;
+            bottom: 0;
+            width: 1px;
+            background: var(--line);
+        }
+
+        .exp::after {
+            content: '';
+            position: absolute;
+            left: 1px;
+            top: 6px;
+            width: 11px;
+            height: 11px;
             border-radius: 50%;
-            background: var(--primary);
-            border: 3px solid #ffffff;
-            box-shadow: 0 0 0 2px var(--primary);
+            background: var(--card);
+            border: 2.5px solid var(--accent);
         }
 
-        .job-header {
+        .exp-head {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
+            align-items: baseline;
             flex-wrap: wrap;
-            margin-bottom: 8px;
-        }
-
-        .job-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--secondary);
-        }
-
-        .company-name {
-            color: var(--primary);
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-
-        .job-location {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-
-        .job-date {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            background: var(--bg-body);
-            padding: 4px 12px;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-        }
-
-        .job-desc-group {
-            margin-top: 10px;
-        }
-
-        .job-desc-group h4 {
-            font-size: 0.88rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--primary);
-            margin-top: 12px;
-            margin-bottom: 6px;
-        }
-
-        .job-desc-group ul {
-            list-style-type: disc;
-            padding-left: 18px;
-        }
-
-        .job-desc-group li {
-            font-size: 0.93rem;
-            color: var(--text-main);
-            margin-bottom: 6px;
-        }
-
-        /* Skills Tags */
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-        }
-
-        .skill-category {
-            background: var(--bg-body);
-            padding: 18px;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-        }
-
-        .skill-category h3 {
-            font-size: 0.88rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--text-muted);
-            margin-bottom: 12px;
-        }
-
-        .tags-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .tag {
-            font-size: 0.82rem;
-            font-weight: 600;
-            padding: 6px 12px;
-            border-radius: 8px;
-            transition: all 0.2s;
-        }
-
-        .tag.method { background: #e0e7ff; color: #3730a3; }
-        .tag.platform { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
-        .tag.bug { background: #fff7ed; color: #c2410c; border: 1px solid #ffedd5; }
-        .tag.tool { background: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; }
-        .tag.soft { background: #fae8ff; color: #86198f; border: 1px solid #f5d0fe; }
-
-        /* Projects Grid */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: all 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-md);
-            border-color: var(--primary);
-        }
-
-        .card-badges {
-            display: flex;
-            gap: 6px;
-            margin-bottom: 12px;
-            flex-wrap: wrap;
-        }
-
-        .badge {
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            padding: 3px 8px;
-            border-radius: 4px;
-            background: var(--primary-light);
-            color: var(--primary);
-        }
-
-        .card h3 {
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: var(--secondary);
-            margin-bottom: 8px;
-        }
-
-        .card p {
-            font-size: 0.88rem;
-            color: var(--text-muted);
-            margin-bottom: 16px;
-            line-height: 1.5;
-        }
-
-        .btn-repo {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            text-decoration: none;
-            color: var(--primary);
-            font-weight: 700;
-            font-size: 0.85rem;
-            transition: gap 0.2s;
-        }
-
-        .btn-repo:hover {
-            gap: 10px;
-        }
-
-        /* Education */
-        .edu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 16px;
-        }
-
-        .edu-card {
-            background: var(--bg-body);
-            padding: 16px 20px;
-            border-radius: 12px;
-            border-left: 4px solid var(--primary);
-        }
-
-        .edu-title {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--secondary);
-        }
-
-        .edu-meta {
-            font-size: 0.82rem;
-            color: var(--text-muted);
+            gap: 4px 16px;
             margin-bottom: 4px;
         }
 
-        .edu-desc {
-            font-size: 0.88rem;
+        .exp-title {
+            font-size: 1.08em;
+            font-weight: 700;
+            color: var(--highlight);
+            letter-spacing: -0.01em;
+        }
+
+        .exp-company {
+            color: var(--accent);
             font-weight: 600;
-            color: var(--primary);
+            font-size: 0.95em;
         }
 
-        /* Footer */
-        footer {
+        .exp-location {
+            font-size: 0.82em;
+            color: var(--muted);
+            font-style: italic;
+            margin-top: 2px;
+        }
+
+        .exp-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78em;
+            font-weight: 500;
+            color: var(--muted);
+            background: var(--bg);
+            padding: 3px 10px;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+
+        .exp-sub {
+            font-size: 0.78em;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin: 16px 0 8px;
+        }
+
+        .exp ul { list-style: none; margin-top: 8px; }
+
+        .exp li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 9px;
+            color: var(--ink-soft);
+            font-size: 0.93em;
+            line-height: 1.6;
+        }
+
+        .exp li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 5px;
+            height: 5px;
+            background: var(--accent-line);
+            border-radius: 50%;
+        }
+
+        .exp li strong { color: var(--ink); font-weight: 600; }
+
+        /* ---------- SKILLS ---------- */
+        .skill-group { margin-bottom: 20px; }
+        .skill-group:last-child { margin-bottom: 0; }
+
+        .skill-label {
+            font-size: 0.78em;
+            font-weight: 600;
+            color: var(--muted);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+
+        .chip {
+            font-size: 0.85em;
+            font-weight: 500;
+            padding: 6px 14px;
+            border-radius: 6px;
+            background: var(--bg);
+            color: var(--ink-soft);
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .chip:hover {
+            border-color: var(--accent-line);
+            background: var(--accent-soft);
+            color: var(--accent);
+        }
+
+        .chip.primary {
+            background: var(--accent-soft);
+            color: var(--accent);
+            border-color: var(--accent-line);
+            font-weight: 600;
+        }
+
+        /* ---------- PROJECTS ---------- */
+        .project {
+            padding: 22px 24px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            margin-bottom: 14px;
+            transition: all 0.25s ease;
+            background: var(--card);
+        }
+
+        .project:last-child { margin-bottom: 0; }
+
+        .project:hover {
+            border-color: var(--accent-line);
+            box-shadow: 0 8px 24px -12px rgba(37, 99, 235, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .project-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .project-title {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: var(--highlight);
+            letter-spacing: -0.01em;
+        }
+
+        .project-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+
+        .ptag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.68em;
+            font-weight: 500;
+            padding: 3px 8px;
+            border-radius: 4px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            letter-spacing: 0.02em;
+        }
+
+        .ptag.gray { background: var(--bg); color: var(--muted); }
+
+        .project-desc {
+            font-size: 0.9em;
+            color: var(--ink-soft);
+            line-height: 1.65;
+            margin-bottom: 10px;
+        }
+
+        .project-desc strong { color: var(--ink); font-weight: 600; }
+
+        .project-list {
+            list-style: none;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px dashed var(--line);
+        }
+
+        .project-list li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 8px;
+            color: var(--ink-soft);
+            font-size: 0.89em;
+            line-height: 1.6;
+        }
+
+        .project-list li:last-child { margin-bottom: 0; }
+
+        .project-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 9px;
+            width: 5px;
+            height: 5px;
+            background: var(--accent-line);
+            border-radius: 50%;
+        }
+
+        .project-list li strong { color: var(--ink); font-weight: 600; }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.82em;
+            font-weight: 600;
+            color: var(--accent);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            margin-top: 6px;
+        }
+
+        .project-link:hover { text-decoration: underline; }
+
+        /* ---------- EDUCATION ---------- */
+        .edu {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .edu-item {
+            padding: 18px 20px;
+            border-left: 3px solid var(--accent);
+            background: var(--bg);
+            border-radius: 0 6px 6px 0;
+        }
+
+        .edu-school {
+            font-weight: 700;
+            color: var(--highlight);
+            font-size: 0.98em;
+            letter-spacing: -0.01em;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .edu-major {
+            font-size: 0.88em;
+            color: var(--ink-soft);
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .edu-year {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72em;
+            color: var(--muted);
+            font-weight: 500;
+        }
+
+        /* ---------- FOOTER ---------- */
+        .footer {
+            padding: 22px 52px;
+            background: var(--bg);
+            border-top: 1px solid var(--line);
             text-align: center;
-            padding: 24px;
-            background: var(--bg-body);
-            border-top: 1px solid var(--border-color);
-            color: var(--text-muted);
-            font-size: 0.85rem;
+            font-size: 0.78em;
+            color: var(--muted);
+            letter-spacing: 0.03em;
         }
 
-        /* Media Queries & Print */
-        @media (max-width: 768px) {
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 720px) {
             body { padding: 0; }
-            .container { border-radius: 0; border: none; }
-            header { padding: 30px 20px; }
-            .actions { position: static; margin-bottom: 20px; }
-            .main-content { padding: 24px 20px; }
-            h1 { font-size: 2rem; }
-            .job-header { flex-direction: column; gap: 4px; }
+            .page { border-radius: 0; box-shadow: none; }
+            .header { padding: 36px 24px 28px; }
+            .name { font-size: 1.85em; }
+            .body { padding: 28px 24px 36px; }
+            .footer { padding: 20px 24px; }
+            .edu { grid-template-columns: 1fr; }
+            .exp-head { flex-direction: column; align-items: flex-start; }
+            .exp-date { margin-top: 4px; }
         }
 
+        /* ---------- PRINT ---------- */
         @media print {
-            body { background: #fff; padding: 0; }
-            .container { box-shadow: none; border: none; }
-            .actions { display: none; }
-            .card:hover { transform: none; box-shadow: none; }
+            body { background: #fff; padding: 0; font-size: 12px; }
+            .page { box-shadow: none; max-width: 100%; }
+            .header { padding: 24px 32px; }
+            .body { padding: 20px 32px; }
+            .project, .exp, .edu-item { break-inside: avoid; }
+            .chip, .ptag { border: 1px solid var(--line); }
+            .project:hover { transform: none; box-shadow: none; }
+            .footer { display: none; }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <header>
-        <div class="actions">
-            <button class="btn-action" onclick="window.print()"><i class="fas fa-print"></i> Cetak / Simpan PDF</button>
+<div class="page">
+
+    <!-- ============ HEADER ============ -->
+    <header class="header">
+        <h1 class="name">Aqila <span>Putri</span></h1>
+        <div class="role">
+            <span class="dot"></span> Software QA Engineer · Web, Mobile & Game Testing
         </div>
-        <div class="header-content">
-            <h1>AQILA PUTRI</h1>
-            <div class="role-badge">Software QA Engineer | Web, Mobile & Game Testing</div>
-            
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-location-dot"></i>
-                    <span>Bogor Regency, Indonesia</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:aqilaptri12@gmail.com">aqilaptri12@gmail.com</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+62 888-9317-373</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <a href="https://github.com/aqilaptri12/idle-tycoon-test-checklists/blob/main/README.md" target="_blank">GitHub Portfolio</a>
-                </div>
-            </div>
+        <div class="contact">
+            <a href="tel:+628889317373"><i class="fas fa-phone"></i> +62 888-9317-373</a>
+            <a href="mailto:aqilaptri12@gmail.com"><i class="fas fa-envelope"></i> aqilaptri12@gmail.com</a>
+            <a><i class="fas fa-map-marker-alt"></i> Bogor Regency, Indonesia</a>
+            <a href="https://github.com/aqilaptri12" target="_blank"><i class="fab fa-github"></i> Portfolio</a>
         </div>
     </header>
 
-    <div class="main-content">
-        <!-- Summary -->
+    <!-- ============ BODY ============ -->
+    <main class="body">
+
+        <!-- SUMMARY -->
         <section>
-            <h2 class="section-title"><i class="fas fa-user-check"></i> Professional Summary</h2>
-            <p class="summary-text">
-                Detail-oriented and results-driven <strong>Software QA Engineer</strong> with hands-on experience in Manual Testing across Web Applications, Mobile Applications (Android & iOS), and Games[cite: 2]. Proven track record in executing functional, regression, UI/UX, and usability testing to ensure high-performance, defect-free software delivery[cite: 2]. Skilled in the complete Software Testing Life Cycle (STLC)—from designing structured test plans and test scenarios to detailed bug reporting and re-testing[cite: 2]. Exceptional communicator adept at bridging technical gaps between developers, project managers, and cross-functional teams to elevate overall product quality[cite: 2].
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="summary">
+                Detail-oriented and results-driven <strong>Software QA Engineer</strong> with hands-on experience in
+                <strong>Manual Testing</strong> across Web Applications, Mobile Applications (Android &amp; iOS), and Games.
+                Proven track record in executing <strong>functional, regression, UI/UX, and usability testing</strong>
+                to ensure high-performance, defect-free software delivery. Skilled in the complete
+                <strong>Software Testing Life Cycle (STLC)</strong> — from designing structured test plans and test scenarios
+                to detailed bug reporting and re-testing. Exceptional communicator, adept at bridging technical gaps
+                between developers, project managers, and cross-functional teams to elevate overall product quality.
             </p>
         </section>
 
-        <!-- Work Experience -->
+        <!-- EXPERIENCE -->
         <section>
-            <h2 class="section-title"><i class="fas fa-briefcase"></i> Work Experience</h2>
-            
-            <div class="timeline">
-                <!-- PT ARMB -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="job-header">
-                        <div>
-                            <div class="job-title">Manual QA Tester</div>
-                            <div class="company-name">PT ARMB</div>
-                            <div class="job-location">Indonesia</div>
-                        </div>
-                        <span class="job-date">October 2024 – Present</span>
-                    </div>
-                    
-                    <div class="job-desc-group">
-                        <h4>Test Execution & Quality Assurance</h4>
-                        <ul>
-                            <li>Conducted end-to-end Manual Testing for core web and mobile application features, verifying functionality against business requirements and design specs[cite: 2].</li>
-                            <li>Performed rigorous Regression Testing before each production release to ensure existing features remained stable after bug fixes and updates[cite: 2].</li>
-                            <li>Executed UI/UX and Usability Testing across various screen resolutions and mobile devices to validate design consistency[cite: 2].</li>
-                        </ul>
+            <h2 class="section-title">Work Experience</h2>
 
-                        <h4>Defect Lifecycle & Reporting</h4>
-                        <ul>
-                            <li>Identified, documented, and tracked software bugs using clear, actionable defect reports (including severity level, steps to reproduce, expected vs. actual results, and visual evidence/logs)[cite: 2].</li>
-                            <li>Managed the full bug lifecycle by collaborating directly with the development team to clarify defect behaviors, verify fixes, and perform re-testing[cite: 2].</li>
-                        </ul>
-
-                        <h4>Cross-Team Collaboration & Communication</h4>
-                        <ul>
-                            <li>Actively participated in daily stand-ups and sprint planning sessions to discuss test coverage, project timelines, and potential quality risks[cite: 2].</li>
-                            <li>Communicated test progress, defect summaries, and release readiness status effectively to project managers and stakeholders[cite: 2].</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Pierre & Rady LLC -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="job-header">
-                        <div>
-                            <div class="job-title">Manual QA Tester</div>
-                            <div class="company-name">Pierre & Rady LLC</div>
-                            <div class="job-location">Remote / Overseas</div>
-                        </div>
-                        <span class="job-date">August 2023 – July 2024</span>
-                    </div>
-                    
-                    <div class="job-desc-group">
-                        <h4>Web & Mobile Application Testing</h4>
-                        <ul>
-                            <li>Executed comprehensive Manual Functional Testing for diverse web and mobile projects, ensuring seamless user journeys across multi-platform environments[cite: 2].</li>
-                            <li>Performed Cross-Browser & Cross-Device Testing (Chrome, Safari, Firefox, iOS, Android) to identify layout breaks, responsiveness issues, and compatibility defects[cite: 2].</li>
-                        </ul>
-
-                        <h4>Test Case Design & Documentation</h4>
-                        <ul>
-                            <li>Authored and maintained structured Test Cases, Test Scenarios, and Test Scripts based on product requirements documents (PRD)[cite: 2].</li>
-                            <li>Conducted exploratory testing on early feature builds to discover edge cases and unexpected system behaviors[cite: 2].</li>
-                        </ul>
-
-                        <h4>Communication & Stakeholder Collaboration</h4>
-                        <ul>
-                            <li>Worked in an agile environment with international/remote team members, delivering timely updates on QA progress and blocker issues[cite: 2].</li>
-                            <li>Liaised between non-technical stakeholders and engineering teams to translate user feedback into technical bug reports and quality improvements[cite: 2].</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Key Projects / Portfolio -->
-        <section>
-            <h2 class="section-title"><i class="fas fa-folder-open"></i> Key Projects & Portfolio Documentation</h2>
-            <div class="portfolio-grid">
-                
-                <!-- Github Portfolio Card -->
-                <div class="card" style="border-color: var(--primary);">
+            <!-- PT ARMB -->
+            <div class="exp">
+                <div class="exp-head">
                     <div>
-                        <div class="card-badges">
-                            <span class="badge">Game QA</span>
-                            <span class="badge">Test Checklists</span>
-                            <span class="badge">GitHub Repository</span>
-                        </div>
-                        <h3>Idle Tycoon Game Test Checklists</h3>
-                        <p>Dokumentasi skenario pengujian komprehensif, daftar periksa QA (test checklists), dan identifikasi edge case untuk mekanisme game Idle Tycoon.</p>
+                        <div class="exp-title">Manual QA Tester</div>
+                        <div class="exp-company">PT ARMB</div>
+                        <div class="exp-location">Indonesia</div>
                     </div>
-                    <a href="https://github.com/aqilaptri12/idle-tycoon-test-checklists/blob/main/README.md" class="btn-repo" target="_blank">
-                        Buka Repository GitHub <i class="fas fa-arrow-right"></i>
-                    </a>
+                    <span class="exp-date">Oct 2024 — Present</span>
                 </div>
 
-                <div class="card">
+                <div class="exp-sub">Test Execution &amp; Quality Assurance</div>
+                <ul>
+                    <li>Conducted end-to-end <strong>Manual Testing</strong> for core web and mobile application features, verifying functionality against business requirements and design specs.</li>
+                    <li>Performed rigorous <strong>Regression Testing</strong> before each production release to ensure existing features remained stable after bug fixes and updates.</li>
+                    <li>Executed <strong>UI/UX and Usability Testing</strong> across various screen resolutions and mobile devices to validate design consistency.</li>
+                </ul>
+
+                <div class="exp-sub">Defect Lifecycle &amp; Reporting</div>
+                <ul>
+                    <li>Identified, documented, and tracked software bugs using clear, actionable <strong>defect reports</strong> — including severity level, steps to reproduce, expected vs. actual results, and visual evidence/logs.</li>
+                    <li>Managed the full <strong>bug lifecycle</strong> by collaborating directly with the development team to clarify defect behaviors, verify fixes, and perform <strong>re-testing</strong>.</li>
+                </ul>
+
+                <div class="exp-sub">Cross-Team Collaboration &amp; Communication</div>
+                <ul>
+                    <li>Actively participated in <strong>daily stand-ups</strong> and <strong>sprint planning</strong> sessions to discuss test coverage, project timelines, and potential quality risks.</li>
+                    <li>Communicated test progress, defect summaries, and <strong>release readiness status</strong> effectively to project managers and stakeholders.</li>
+                </ul>
+            </div>
+
+            <!-- Pierre & Rady -->
+            <div class="exp">
+                <div class="exp-head">
                     <div>
-                        <div class="card-badges">
-                            <span class="badge">Web Testing</span>
-                            <span class="badge">E-Commerce</span>
-                        </div>
-                        <h3>Web Application Testing</h3>
-                        <p>Pengujian fungsional untuk alur pendaftaran pengguna, filter produk, keranjang belanja, hingga proses pembayaran checkout[cite: 2].</p>
+                        <div class="exp-title">Manual QA Tester</div>
+                        <div class="exp-company">Pierre &amp; Rady LLC</div>
+                        <div class="exp-location">Remote / Overseas</div>
                     </div>
+                    <span class="exp-date">Aug 2023 — Jul 2024</span>
                 </div>
 
-                <div class="card">
-                    <div>
-                        <div class="card-badges">
-                            <span class="badge">Mobile QA</span>
-                            <span class="badge">iOS & Android</span>
-                        </div>
-                        <h3>Mobile Application Testing</h3>
-                        <p>Pengujian fungsionalitas, interaksi layar sentuh, dan ketersediaan aplikasi pada perangkat fisik iOS & Android dalam berbagai kondisi jaringan[cite: 2].</p>
-                    </div>
-                </div>
+                <div class="exp-sub">Web &amp; Mobile Application Testing</div>
+                <ul>
+                    <li>Executed comprehensive <strong>Manual Functional Testing</strong> for diverse web and mobile projects, ensuring seamless user journeys across multi-platform environments.</li>
+                    <li>Performed <strong>Cross-Browser &amp; Cross-Device Testing</strong> (Chrome, Safari, Firefox, iOS, Android) to identify layout breaks, responsiveness issues, and compatibility defects.</li>
+                </ul>
 
+                <div class="exp-sub">Test Case Design &amp; Documentation</div>
+                <ul>
+                    <li>Authored and maintained structured <strong>Test Cases</strong>, <strong>Test Scenarios</strong>, and <strong>Test Scripts</strong> based on Product Requirements Documents (PRD).</li>
+                    <li>Conducted <strong>exploratory testing</strong> on early feature builds to discover edge cases and unexpected system behaviors.</li>
+                </ul>
+
+                <div class="exp-sub">Communication &amp; Stakeholder Collaboration</div>
+                <ul>
+                    <li>Worked in an <strong>agile environment</strong> with international/remote team members, delivering timely updates on QA progress and blocker issues.</li>
+                    <li>Liaised between non-technical stakeholders and engineering teams to translate user feedback into technical bug reports and quality improvements.</li>
+                </ul>
             </div>
         </section>
 
-        <!-- Skills & Tools -->
+        <!-- SKILLS -->
         <section>
-            <h2 class="section-title"><i class="fas fa-tools"></i> Technical Skills & Tools</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Testing Methodologies</h3>
-                    <div class="tags-wrapper">
-                        <span class="tag method">Manual Testing</span>
-                        <span class="tag method">Functional Testing</span>
-                        <span class="tag method">Regression Testing</span>
-                        <span class="tag method">Usability Testing</span>
-                        <span class="tag method">UI/UX Testing</span>
-                        <span class="tag method">Boundary Value Analysis</span>
-                        <span class="tag method">Exploratory Testing</span>
-                        <span class="tag method">STLC & SDLC</span>
-                    </div>
-                </div>
+            <h2 class="section-title">Technical Skills &amp; Tools</h2>
 
-                <div class="skill-category">
-                    <h3>Platform Testing</h3>
-                    <div class="tags-wrapper">
-                        <span class="tag platform">Web Applications</span>
-                        <span class="tag platform">Mobile Apps (Android & iOS)</span>
-                        <span class="tag platform">Game Mechanics & In-Game Systems</span>
-                    </div>
+            <div class="skill-group">
+                <div class="skill-label">Testing Methodologies</div>
+                <div class="chips">
+                    <span class="chip primary">Manual Testing</span>
+                    <span class="chip primary">Functional Testing</span>
+                    <span class="chip primary">Regression Testing</span>
+                    <span class="chip">Usability Testing</span>
+                    <span class="chip">UI/UX Testing</span>
+                    <span class="chip">Boundary Value Analysis</span>
+                    <span class="chip">Exploratory Testing</span>
+                    <span class="chip">STLC</span>
+                    <span class="chip">SDLC</span>
                 </div>
-                
-                <div class="skill-category">
-                    <h3>Bug & Quality Management</h3>
-                    <div class="tags-wrapper">
-                        <span class="tag bug">Defect Lifecycle</span>
-                        <span class="tag bug">Test Case Design</span>
-                        <span class="tag bug">Bug Reporting</span>
-                        <span class="tag bug">Severity & Priority Assessment</span>
-                        <span class="tag bug">Edge-Case Identification</span>
-                    </div>
-                </div>
+            </div>
 
-                <div class="skill-category">
-                    <h3>Tools & Software</h3>
-                    <div class="tags-wrapper">
-                        <span class="tag tool">Jira</span>
-                        <span class="tag tool">Trello</span>
-                        <span class="tag tool">Notion</span>
-                        <span class="tag tool">GitHub</span>
-                        <span class="tag tool">Chrome DevTools</span>
-                        <span class="tag tool">Postman (Basic)</span>
-                        <span class="tag tool">Android Studio (Emulator/Logcat)</span>
-                    </div>
+            <div class="skill-group">
+                <div class="skill-label">Platform Testing</div>
+                <div class="chips">
+                    <span class="chip">Web Applications</span>
+                    <span class="chip">Mobile — Android &amp; iOS</span>
+                    <span class="chip">Game Mechanics &amp; In-Game Systems</span>
                 </div>
+            </div>
 
-                <div class="skill-category" style="grid-column: 1 / -1;">
-                    <h3>Communication & Soft Skills</h3>
-                    <div class="tags-wrapper">
-                        <span class="tag soft">Technical Documentation</span>
-                        <span class="tag soft">Cross-Functional Teamwork</span>
-                        <span class="tag soft">Remote Collaboration</span>
-                        <span class="tag soft">Stakeholder Communication</span>
-                        <span class="tag soft">Problem-Solving</span>
-                    </div>
+            <div class="skill-group">
+                <div class="skill-label">Bug &amp; Quality Management</div>
+                <div class="chips">
+                    <span class="chip">Defect Lifecycle</span>
+                    <span class="chip">Test Case Design</span>
+                    <span class="chip">Bug Reporting</span>
+                    <span class="chip">Severity &amp; Priority Assessment</span>
+                    <span class="chip">Edge-Case Identification</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-label">Tools &amp; Software</div>
+                <div class="chips">
+                    <span class="chip">Jira</span>
+                    <span class="chip">Trello</span>
+                    <span class="chip">Notion</span>
+                    <span class="chip">GitHub</span>
+                    <span class="chip">Chrome DevTools</span>
+                    <span class="chip">Postman (Basic)</span>
+                    <span class="chip">Android Studio (Emulator/Logcat)</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-label">Communication &amp; Soft Skills</div>
+                <div class="chips">
+                    <span class="chip">Technical Documentation</span>
+                    <span class="chip">Cross-Functional Teamwork</span>
+                    <span class="chip">Remote Collaboration</span>
+                    <span class="chip">Stakeholder Communication</span>
+                    <span class="chip">Problem-Solving</span>
                 </div>
             </div>
         </section>
 
-        <!-- Education -->
+        <!-- PROJECTS -->
         <section>
-            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
-            <div class="edu-grid">
-                <div class="edu-card">
-                    <div class="edu-title">Universitas Terbuka</div>
-                    <div class="edu-meta">Present</div>
-                    <div class="edu-desc">Bachelor of Business</div>
+            <h2 class="section-title">Key Projects / Portfolio</h2>
+
+            <div class="project">
+                <div class="project-head">
+                    <div class="project-title">Multi-Platform QA Testing Portfolio</div>
+                    <div class="project-tags">
+                        <span class="ptag">Web</span>
+                        <span class="ptag">Mobile</span>
+                        <span class="ptag">Games</span>
+                    </div>
                 </div>
-                <div class="edu-card">
-                    <div class="edu-title">SMK Wikrama Bogor</div>
-                    <div class="edu-meta">2020 – 2024</div>
-                    <div class="edu-desc">Software and Game Development (PPLG)</div>
+                <p class="project-desc">
+                    Hands-on Quality Assurance testing covering <strong>Web Applications</strong>, <strong>Mobile Apps</strong>, and <strong>Game Mechanics</strong>.
+                </p>
+
+                <ul class="project-list">
+                    <li>
+                        <strong>Web Application Testing (E-Commerce Platform):</strong>
+                        Executed functional testing for user registration, product filtering, shopping cart, and payment checkout flows.
+                        Validated cross-browser layout consistency and UI responsiveness.
+                    </li>
+                    <li>
+                        <strong>Mobile Application Testing (iOS &amp; Android):</strong>
+                        Performed functional, touch-control, and usability testing on physical mobile devices.
+                        Tested app behavior under varying network conditions and background-app state changes.
+                    </li>
+                    <li>
+                        <strong>Game Testing (Mobile Action/Casual Game):</strong>
+                        Tested core game mechanics, collision detection, UI overlays, in-game store transactions, and virtual economy flows.
+                        Documented visual glitches, boundary condition failures, and frame-rate performance drops.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section>
+            <h2 class="section-title">Education</h2>
+            <div class="edu">
+                <div class="edu-item">
+                    <span class="edu-school">Universitas Terbuka</span>
+                    <span class="edu-major">Bachelor of Business</span>
+                    <span class="edu-year">Present</span>
+                </div>
+                <div class="edu-item">
+                    <span class="edu-school">SMK Wikrama Bogor</span>
+                    <span class="edu-major">Software and Game Development (PPLG)</span>
+                    <span class="edu-year">2020 — 2024</span>
                 </div>
             </div>
         </section>
-    </div>
 
-    <footer>
-        <p>&copy; 2026 Aqila Putri. Built for Portfolio & Professional Presentation.</p>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        © 2025 Aqila Putri · Software QA Engineer · Portfolio
     </footer>
+
 </div>
 
 </body>
