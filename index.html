@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Aqila Putri | Software QA Engineer & Technical Writer</title>
+    <title>CV Aqila Putri | Software QA Engineer</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
@@ -20,10 +20,8 @@
             --bg-body: #f8fafc;
             --card-bg: #ffffff;
             --border-color: #e2e8f0;
-            --accent-orange: #f97316;
-            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
             --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
         }
 
         * {
@@ -64,7 +62,7 @@
         }
 
         h1 {
-            font-size: 2.6rem;
+            font-size: 2.5rem;
             font-weight: 800;
             letter-spacing: -0.025em;
             margin-bottom: 8px;
@@ -195,7 +193,7 @@
 
         .timeline-item {
             position: relative;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
         .timeline-item:last-child {
@@ -234,6 +232,12 @@
             font-size: 0.95rem;
         }
 
+        .job-location {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
         .job-date {
             font-size: 0.85rem;
             font-weight: 600;
@@ -249,11 +253,11 @@
         }
 
         .job-desc-group h4 {
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            color: var(--text-muted);
-            margin-top: 10px;
+            color: var(--primary);
+            margin-top: 12px;
             margin-bottom: 6px;
         }
 
@@ -271,7 +275,7 @@
         /* Skills Tags */
         .skills-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 20px;
         }
 
@@ -283,7 +287,7 @@
         }
 
         .skill-category h3 {
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             color: var(--text-muted);
@@ -304,9 +308,11 @@
             transition: all 0.2s;
         }
 
-        .tag.core { background: #e0e7ff; color: #3730a3; }
-        .tag.tech { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
-        .tag.lang { background: #fff7ed; color: #c2410c; border: 1px solid #ffedd5; }
+        .tag.method { background: #e0e7ff; color: #3730a3; }
+        .tag.platform { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+        .tag.bug { background: #fff7ed; color: #c2410c; border: 1px solid #ffedd5; }
+        .tag.tool { background: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; }
+        .tag.soft { background: #fae8ff; color: #86198f; border: 1px solid #f5d0fe; }
 
         /* Projects Grid */
         .portfolio-grid {
@@ -332,15 +338,11 @@
             border-color: var(--primary);
         }
 
-        .card.private {
-            background: #fafafa;
-            border-style: dashed;
-        }
-
         .card-badges {
             display: flex;
             gap: 6px;
             margin-bottom: 12px;
+            flex-wrap: wrap;
         }
 
         .badge {
@@ -351,11 +353,6 @@
             border-radius: 4px;
             background: var(--primary-light);
             color: var(--primary);
-        }
-
-        .badge.muted {
-            background: #f1f5f9;
-            color: var(--text-muted);
         }
 
         .card h3 {
@@ -370,21 +367,6 @@
             color: var(--text-muted);
             margin-bottom: 16px;
             line-height: 1.5;
-        }
-
-        .btn-repo {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            text-decoration: none;
-            color: var(--primary);
-            font-weight: 700;
-            font-size: 0.85rem;
-            transition: gap 0.2s;
-        }
-
-        .btn-repo:hover {
-            gap: 10px;
         }
 
         /* Education */
@@ -457,12 +439,12 @@
         </div>
         <div class="header-content">
             <h1>AQILA PUTRI</h1>
-            <div class="role-badge">Junior Technical Writer & QA Manual Tester</div>
+            <div class="role-badge">Software QA Engineer | Web, Mobile & Game Testing</div>
             
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fas fa-location-dot"></i>
-                    <span>Bogor, Indonesia</span>
+                    <span>Bogor Regency, Indonesia</span>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
@@ -470,11 +452,15 @@
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
-                    <span>+62 877-8936-9723</span>
+                    <span>+62 888-9317-373</span>
                 </div>
                 <div class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <a href="https://github.com/aqilaptri12" target="_blank">github.com/aqilaptri12</a>
+                    <i class="fab fa-linkedin"></i>
+                    <a href="#" target="_blank">LinkedIn Profile</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <a href="#" target="_blank">Portfolio</a>
                 </div>
             </div>
         </div>
@@ -483,12 +469,9 @@
     <div class="main-content">
         <!-- Summary -->
         <section>
-            <h2 class="section-title"><i class="fas fa-user"></i> Professional Summary</h2>
+            <h2 class="section-title"><i class="fas fa-user-check"></i> Professional Summary</h2>
             <p class="summary-text">
-                Detail-oriented professional with dual expertise in <strong>Technical Writing</strong> and <strong>Quality Assurance (QA)</strong>. 
-                Experienced in transforming complex technical information into clear, user-friendly documentation for internal tools and end-users. 
-                Simultaneously skilled in executing manual testing (Functional & Regression), creating structured test cases, and tracking bugs to ensure high product quality. 
-                Currently enhancing proficiency in <strong>Mandarin (HSK Level 4 target)</strong> to support cross-border business communication.
+                Detail-oriented and results-driven <strong>Software QA Engineer</strong> with hands-on experience in Manual Testing across Web Applications, Mobile Applications (Android & iOS), and Games. Proven track record in executing functional, regression, UI/UX, and usability testing to ensure high-performance, defect-free software delivery. Skilled in the complete Software Testing Life Cycle (STLC)—from designing structured test plans and test scenarios to detailed bug reporting and re-testing. Exceptional communicator adept at bridging technical gaps between developers, project managers, and cross-functional teams to elevate overall product quality.
             </p>
         </section>
 
@@ -497,121 +480,179 @@
             <h2 class="section-title"><i class="fas fa-briefcase"></i> Work Experience</h2>
             
             <div class="timeline">
+                <!-- PT ARMB -->
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="job-header">
                         <div>
-                            <div class="job-title">Junior Technical Writer & QA Manual</div>
-                            <div class="company-name">Pierre & Rady LLC</div>
+                            <div class="job-title">Manual QA Tester</div>
+                            <div class="company-name">PT ARMB</div>
+                            <div class="job-location">Indonesia</div>
                         </div>
-                        <span class="job-date">Agustus 2023 - Oktober 2025</span>
+                        <span class="job-date">October 2024 – Present</span>
                     </div>
                     
                     <div class="job-desc-group">
-                        <h4>Technical Writing Responsibilities</h4>
+                        <h4>Test Execution & Quality Assurance</h4>
                         <ul>
-                            <li>Created clear and user-friendly documentation for internal tools and product features (User Guides & SOPs).</li>
-                            <li>Wrote simple technical explanations and step-by-step guides to facilitate team onboarding on new updates.</li>
-                            <li>Organized and updated internal knowledge bases using <strong>Notion</strong> and <strong>Confluence</strong> to improve team efficiency.</li>
-                            <li>Collaborated with developers to ensure documentation accuracy matched real system behavior.</li>
+                            <li>Conducted end-to-end Manual Testing for core web and mobile application features, verifying functionality against business requirements and design specs.</li>
+                            <li>Performed rigorous Regression Testing before each production release to ensure existing features remained stable after bug fixes and updates[cite: 2].</li>
+                            <li>Executed UI/UX and Usability Testing across various screen resolutions and mobile devices to validate design consistency[cite: 2].</li>
                         </ul>
 
-                        <h4>Quality Assurance Responsibilities</h4>
+                        <h4>Defect Lifecycle & Reporting</h4>
                         <ul>
-                            <li>Performed manual testing (Functional, Regression, UAT) on web applications to meet business requirements.</li>
-                            <li>Created detailed and structured test cases based on user stories and product specifications.</li>
-                            <li>Identified, documented, and tracked bugs with clear reproduction steps using <strong>Jira</strong>.</li>
-                            <li>Provided feedback for UI/UX improvements based on real user interaction scenarios.</li>
+                            <li>Identified, documented, and tracked software bugs using clear, actionable defect reports (including severity level, steps to reproduce, expected vs. actual results, and visual evidence/logs)[cite: 2].</li>
+                            <li>Managed the full bug lifecycle by collaborating directly with the development team to clarify defect behaviors, verify fixes, and perform re-testing[cite: 2].</li>
+                        </ul>
+
+                        <h4>Cross-Team Collaboration & Communication</h4>
+                        <ul>
+                            <li>Actively participated in daily stand-ups and sprint planning sessions to discuss test coverage, project timelines, and potential quality risks[cite: 2].</li>
+                            <li>Communicated test progress, defect summaries, and release readiness status effectively to project managers and stakeholders[cite: 2].</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pierre & Rady LLC -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Manual QA Tester</div>
+                            <div class="company-name">Pierre & Rady LLC</div>
+                            <div class="job-location">Remote / Overseas</div>
+                        </div>
+                        <span class="job-date">August 2023 – July 2024</span>
+                    </div>
+                    
+                    <div class="job-desc-group">
+                        <h4>Web & Mobile Application Testing</h4>
+                        <ul>
+                            <li>Executed comprehensive Manual Functional Testing for diverse web and mobile projects, ensuring seamless user journeys across multi-platform environments[cite: 2].</li>
+                            <li>Performed Cross-Browser & Cross-Device Testing (Chrome, Safari, Firefox, iOS, Android) to identify layout breaks, responsiveness issues, and compatibility defects[cite: 2].</li>
+                        </ul>
+
+                        <h4>Test Case Design & Documentation</h4>
+                        <ul>
+                            <li>Authored and maintained structured Test Cases, Test Scenarios, and Test Scripts based on product requirements documents (PRD)[cite: 2].</li>
+                            <li>Conducted exploratory testing on early feature builds to discover edge cases and unexpected system behaviors[cite: 2].</li>
+                        </ul>
+
+                        <h4>Communication & Stakeholder Collaboration</h4>
+                        <ul>
+                            <li>Worked in an agile environment with international/remote team members, delivering timely updates on QA progress and blocker issues[cite: 2].</li>
+                            <li>Liaised between non-technical stakeholders and engineering teams to translate user feedback into technical bug reports and quality improvements[cite: 2].</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Skills -->
+        <!-- Key Projects / Portfolio -->
         <section>
-            <h2 class="section-title"><i class="fas fa-layer-group"></i> Skills & Proficiency</h2>
+            <h2 class="section-title"><i class="fas fa-folder-open"></i> Key Projects / Portfolio</h2>
+            <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 16px;">
+                <strong>Multi-Platform QA Testing Portfolio (Web, Mobile & Games):</strong> Hands-on Quality Assurance testing covering Web Applications, Mobile Apps, and Game Mechanics[cite: 2].
+            </p>
+            
+            <div class="portfolio-grid">
+                <div class="card">
+                    <div>
+                        <div class="card-badges">
+                            <span class="badge">Web Testing</span>
+                            <span class="badge">E-Commerce</span>
+                        </div>
+                        <h3>Web Application Testing</h3>
+                        <p>Executed functional testing for user registration, product filtering, shopping cart, and payment checkout flows[cite: 2]. Validated cross-browser layout consistency and UI responsiveness[cite: 2].</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="card-badges">
+                            <span class="badge">Mobile QA</span>
+                            <span class="badge">iOS & Android</span>
+                        </div>
+                        <h3>Mobile Application Testing</h3>
+                        <p>Performed functional, touch-control, and usability testing on physical mobile devices[cite: 2]. Tested app behavior under varying network conditions and background-app state changes[cite: 2].</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="card-badges">
+                            <span class="badge">Game Testing</span>
+                            <span class="badge">Mechanics</span>
+                        </div>
+                        <h3>Game Testing (Mobile Action/Casual)</h3>
+                        <p>Tested core game mechanics, collision detection, UI overlays, in-game store transactions, and virtual economy flows[cite: 2]. Documented visual glitches, boundary condition failures, and frame-rate drops[cite: 2].</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Tools -->
+        <section>
+            <h2 class="section-title"><i class="fas fa-tools"></i> Technical Skills & Tools</h2>
             <div class="skills-container">
                 <div class="skill-category">
-                    <h3>Core Competencies</h3>
+                    <h3>Testing Methodologies</h3>
                     <div class="tags-wrapper">
-                        <span class="tag core">Technical Documentation</span>
-                        <span class="tag core">Manual Testing</span>
-                        <span class="tag core">Test Case Design</span>
-                        <span class="tag core">Bug Tracking</span>
-                        <span class="tag core">User Guides</span>
+                        <span class="tag method">Manual Testing</span>
+                        <span class="tag method">Functional Testing</span>
+                        <span class="tag method">Regression Testing</span>
+                        <span class="tag method">Usability Testing</span>
+                        <span class="tag method">UI/UX Testing</span>
+                        <span class="tag method">Boundary Value Analysis</span>
+                        <span class="tag method">Exploratory Testing</span>
+                        <span class="tag method">STLC & SDLC</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Platform Testing</h3>
+                    <div class="tags-wrapper">
+                        <span class="tag platform">Web Applications</span>
+                        <span class="tag platform">Mobile Apps (Android & iOS)</span>
+                        <span class="tag platform">Game Mechanics & In-Game Systems</span>
                     </div>
                 </div>
                 
+                <div class="skill-category">
+                    <h3>Bug & Quality Management</h3>
+                    <div class="tags-wrapper">
+                        <span class="tag bug">Defect Lifecycle</span>
+                        <span class="tag bug">Test Case Design</span>
+                        <span class="tag bug">Bug Reporting</span>
+                        <span class="tag bug">Severity & Priority Assessment</span>
+                        <span class="tag bug">Edge-Case Identification</span>
+                    </div>
+                </div>
+
                 <div class="skill-category">
                     <h3>Tools & Software</h3>
                     <div class="tags-wrapper">
-                        <span class="tag tech">Jira</span>
-                        <span class="tag tech">Confluence</span>
-                        <span class="tag tech">Notion</span>
-                        <span class="tag tech">TestRail</span>
-                        <span class="tag tech">Google Docs</span>
-                        <span class="tag tech">GitHub</span>
+                        <span class="tag tool">Jira</span>
+                        <span class="tag tool">Trello</span>
+                        <span class="tag tool">Notion</span>
+                        <span class="tag tool">GitHub</span>
+                        <span class="tag tool">Chrome DevTools</span>
+                        <span class="tag tool">Postman (Basic)</span>
+                        <span class="tag tool">Android Studio (Emulator/Logcat)</span>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Languages</h3>
+                <div class="skill-category" style="grid-column: 1 / -1;">
+                    <h3>Communication & Soft Skills</h3>
                     <div class="tags-wrapper">
-                        <span class="tag lang">English (Professional)</span>
-                        <span class="tag lang">Mandarin (HSK 4 Target)</span>
+                        <span class="tag soft">Technical Documentation</span>
+                        <span class="tag soft">Cross-Functional Teamwork</span>
+                        <span class="tag soft">Remote Collaboration</span>
+                        <span class="tag soft">Stakeholder Communication</span>
+                        <span class="tag soft">Problem-Solving</span>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Featured Projects -->
-        <section>
-            <h2 class="section-title"><i class="fas fa-folder-open"></i> Featured Projects</h2>
-            <div class="portfolio-grid">
-                
-                <div class="card">
-                    <div>
-                        <div class="card-badges">
-                            <span class="badge">QA Manual</span>
-                            <span class="badge">Bug Report</span>
-                        </div>
-                        <h3>QA Analysis: Login Feature</h3>
-                        <p>Simulasi pengujian manual fitur Login & Registrasi Tokopedia. Mencakup PRD Analysis, 7 Test Cases, Flowchart logika, dan pelaporan Bug Kritis.</p>
-                    </div>
-                    <a href="https://github.com/aqilaptri12/AppFeatureAnalysis_TokopediaLogin" class="btn-repo" target="_blank">
-                        Lihat Repository <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <div class="card-badges">
-                            <span class="badge">Documentation</span>
-                            <span class="badge">Localization</span>
-                        </div>
-                        <h3>WMS Documentation System</h3>
-                        <p>Dokumentasi teknis komprehensif untuk sistem Gudang Pintar. Mencakup User Manual (Inbound), API Reference, dan Lokalisasi UI (Mandarin/Indo).</p>
-                    </div>
-                    <a href="https://github.com/aqilaptri12/GudangPintar-Product-Docs" class="btn-repo" target="_blank">
-                        Lihat Repository <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <div class="card private">
-                    <div>
-                        <div class="card-badges">
-                            <span class="badge muted">Real Project</span>
-                            <span class="badge muted">Confidential</span>
-                        </div>
-                        <h3>Internal Web Platform Docs</h3>
-                        <p>Developed complete feature documentation covering system functions, user flows, and release notes for Pierre & Rady LLC's internal platform.</p>
-                    </div>
-                    <span style="color: #94a3b8; font-size: 0.85rem; font-weight: 600;">
-                        <i class="fas fa-lock"></i> Private / NDA Project
-                    </span>
-                </div>
-
             </div>
         </section>
 
@@ -620,21 +661,21 @@
             <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
             <div class="edu-grid">
                 <div class="edu-card">
-                    <div class="edu-title">SMK Wikrama Bogor</div>
-                    <div class="edu-meta">Lulus 2024</div>
-                    <div class="edu-desc">Rekayasa Perangkat Lunak (RPL)</div>
+                    <div class="edu-title">Universitas Terbuka</div>
+                    <div class="edu-meta">Present</div>
+                    <div class="edu-desc">Bachelor of Business</div>
                 </div>
                 <div class="edu-card">
-                    <div class="edu-title">Universitas Terbuka</div>
-                    <div class="edu-meta">Rencana 2025</div>
-                    <div class="edu-desc">S1 Sastra Inggris / Manajemen</div>
+                    <div class="edu-title">SMK Wikrama Bogor</div>
+                    <div class="edu-meta">2020 – 2024</div>
+                    <div class="edu-desc">Software and Game Development (PPLG)</div>
                 </div>
             </div>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2025 Aqila Putri. Built for Portfolio & Professional Presentation.</p>
+        <p>&copy; 2026 Aqila Putri. Built for Portfolio & Professional Presentation.</p>
     </footer>
 </div>
 
