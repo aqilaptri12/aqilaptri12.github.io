@@ -369,6 +369,21 @@
             line-height: 1.5;
         }
 
+        .btn-repo {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.85rem;
+            transition: gap 0.2s;
+        }
+
+        .btn-repo:hover {
+            gap: 10px;
+        }
+
         /* Education */
         .edu-grid {
             display: grid;
@@ -455,12 +470,8 @@
                     <span>+62 888-9317-373</span>
                 </div>
                 <div class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <a href="#" target="_blank">LinkedIn Profile</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-globe"></i>
-                    <a href="#" target="_blank">Portfolio</a>
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/aqilaptri12/idle-tycoon-test-checklists/blob/main/README.md" target="_blank">GitHub Portfolio</a>
                 </div>
             </div>
         </div>
@@ -471,7 +482,7 @@
         <section>
             <h2 class="section-title"><i class="fas fa-user-check"></i> Professional Summary</h2>
             <p class="summary-text">
-                Detail-oriented and results-driven <strong>Software QA Engineer</strong> with hands-on experience in Manual Testing across Web Applications, Mobile Applications (Android & iOS), and Games. Proven track record in executing functional, regression, UI/UX, and usability testing to ensure high-performance, defect-free software delivery. Skilled in the complete Software Testing Life Cycle (STLC)—from designing structured test plans and test scenarios to detailed bug reporting and re-testing. Exceptional communicator adept at bridging technical gaps between developers, project managers, and cross-functional teams to elevate overall product quality.
+                Detail-oriented and results-driven <strong>Software QA Engineer</strong> with hands-on experience in Manual Testing across Web Applications, Mobile Applications (Android & iOS), and Games[cite: 2]. Proven track record in executing functional, regression, UI/UX, and usability testing to ensure high-performance, defect-free software delivery[cite: 2]. Skilled in the complete Software Testing Life Cycle (STLC)—from designing structured test plans and test scenarios to detailed bug reporting and re-testing[cite: 2]. Exceptional communicator adept at bridging technical gaps between developers, project managers, and cross-functional teams to elevate overall product quality[cite: 2].
             </p>
         </section>
 
@@ -495,7 +506,7 @@
                     <div class="job-desc-group">
                         <h4>Test Execution & Quality Assurance</h4>
                         <ul>
-                            <li>Conducted end-to-end Manual Testing for core web and mobile application features, verifying functionality against business requirements and design specs.</li>
+                            <li>Conducted end-to-end Manual Testing for core web and mobile application features, verifying functionality against business requirements and design specs[cite: 2].</li>
                             <li>Performed rigorous Regression Testing before each production release to ensure existing features remained stable after bug fixes and updates[cite: 2].</li>
                             <li>Executed UI/UX and Usability Testing across various screen resolutions and mobile devices to validate design consistency[cite: 2].</li>
                         </ul>
@@ -551,12 +562,25 @@
 
         <!-- Key Projects / Portfolio -->
         <section>
-            <h2 class="section-title"><i class="fas fa-folder-open"></i> Key Projects / Portfolio</h2>
-            <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 16px;">
-                <strong>Multi-Platform QA Testing Portfolio (Web, Mobile & Games):</strong> Hands-on Quality Assurance testing covering Web Applications, Mobile Apps, and Game Mechanics[cite: 2].
-            </p>
-            
+            <h2 class="section-title"><i class="fas fa-folder-open"></i> Key Projects & Portfolio Documentation</h2>
             <div class="portfolio-grid">
+                
+                <!-- Github Portfolio Card -->
+                <div class="card" style="border-color: var(--primary);">
+                    <div>
+                        <div class="card-badges">
+                            <span class="badge">Game QA</span>
+                            <span class="badge">Test Checklists</span>
+                            <span class="badge">GitHub Repository</span>
+                        </div>
+                        <h3>Idle Tycoon Game Test Checklists</h3>
+                        <p>Dokumentasi skenario pengujian komprehensif, daftar periksa QA (test checklists), dan identifikasi edge case untuk mekanisme game Idle Tycoon.</p>
+                    </div>
+                    <a href="https://github.com/aqilaptri12/idle-tycoon-test-checklists/blob/main/README.md" class="btn-repo" target="_blank">
+                        Buka Repository GitHub <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
                 <div class="card">
                     <div>
                         <div class="card-badges">
@@ -564,7 +588,7 @@
                             <span class="badge">E-Commerce</span>
                         </div>
                         <h3>Web Application Testing</h3>
-                        <p>Executed functional testing for user registration, product filtering, shopping cart, and payment checkout flows[cite: 2]. Validated cross-browser layout consistency and UI responsiveness[cite: 2].</p>
+                        <p>Pengujian fungsional untuk alur pendaftaran pengguna, filter produk, keranjang belanja, hingga proses pembayaran checkout[cite: 2].</p>
                     </div>
                 </div>
 
@@ -575,20 +599,10 @@
                             <span class="badge">iOS & Android</span>
                         </div>
                         <h3>Mobile Application Testing</h3>
-                        <p>Performed functional, touch-control, and usability testing on physical mobile devices[cite: 2]. Tested app behavior under varying network conditions and background-app state changes[cite: 2].</p>
+                        <p>Pengujian fungsionalitas, interaksi layar sentuh, dan ketersediaan aplikasi pada perangkat fisik iOS & Android dalam berbagai kondisi jaringan[cite: 2].</p>
                     </div>
                 </div>
 
-                <div class="card">
-                    <div>
-                        <div class="card-badges">
-                            <span class="badge">Game Testing</span>
-                            <span class="badge">Mechanics</span>
-                        </div>
-                        <h3>Game Testing (Mobile Action/Casual)</h3>
-                        <p>Tested core game mechanics, collision detection, UI overlays, in-game store transactions, and virtual economy flows[cite: 2]. Documented visual glitches, boundary condition failures, and frame-rate drops[cite: 2].</p>
-                    </div>
-                </div>
             </div>
         </section>
 
