@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,16 +13,17 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --ink: #1a1f2e;
-            --ink-soft: #4a5266;
-            --muted: #8b93a7;
-            --line: #e8ebf0;
-            --bg: #f4f6fa;
+            --ink: #2b2430;
+            --ink-soft: #574a55;
+            --muted: #9a8a94;
+            --line: #f4e4ec;
+            --bg: #fdf6f9;
             --card: #ffffff;
-            --accent: #2563eb;
-            --accent-soft: #eff4ff;
-            --accent-line: #c7d9ff;
-            --highlight: #0f172a;
+            --accent: #d4789f;
+            --accent-deep: #b85c85;
+            --accent-soft: #fdf2f7;
+            --accent-line: #f7c6d9;
+            --highlight: #2b2430;
         }
 
         html { scroll-behavior: smooth; }
@@ -43,8 +44,8 @@
             margin: 0 auto;
             background: var(--card);
             border-radius: 4px;
-            box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04),
-                        0 20px 60px -20px rgba(15, 23, 42, 0.12);
+            box-shadow: 0 1px 3px rgba(184, 92, 133, 0.05),
+                        0 20px 60px -20px rgba(184, 92, 133, 0.18);
             overflow: hidden;
         }
 
@@ -53,6 +54,7 @@
             padding: 48px 52px 40px;
             border-bottom: 1px solid var(--line);
             position: relative;
+            background: linear-gradient(180deg, #fff9fb 0%, #ffffff 100%);
         }
 
         .header::before {
@@ -60,7 +62,7 @@
             position: absolute;
             top: 0; left: 0; right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--accent) 0%, #60a5fa 100%);
+            background: linear-gradient(90deg, #d4789f 0%, #f0a3c1 50%, #f7c6d9 100%);
         }
 
         .name {
@@ -109,7 +111,7 @@
             transition: color 0.2s;
         }
 
-        .contact a:hover { color: var(--accent); }
+        .contact a:hover { color: var(--accent-deep); }
 
         .contact i {
             color: var(--accent);
@@ -129,7 +131,7 @@
             font-weight: 700;
             letter-spacing: 0.16em;
             text-transform: uppercase;
-            color: var(--accent);
+            color: var(--accent-deep);
             margin-bottom: 20px;
             display: flex;
             align-items: center;
@@ -201,7 +203,7 @@
         }
 
         .exp-company {
-            color: var(--accent);
+            color: var(--accent-deep);
             font-weight: 600;
             font-size: 0.95em;
         }
@@ -217,8 +219,8 @@
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.78em;
             font-weight: 500;
-            color: var(--muted);
-            background: var(--bg);
+            color: var(--accent-deep);
+            background: var(--accent-soft);
             padding: 3px 10px;
             border-radius: 20px;
             white-space: nowrap;
@@ -286,12 +288,12 @@
         .chip:hover {
             border-color: var(--accent-line);
             background: var(--accent-soft);
-            color: var(--accent);
+            color: var(--accent-deep);
         }
 
         .chip.primary {
             background: var(--accent-soft);
-            color: var(--accent);
+            color: var(--accent-deep);
             border-color: var(--accent-line);
             font-weight: 600;
         }
@@ -310,7 +312,7 @@
 
         .project:hover {
             border-color: var(--accent-line);
-            box-shadow: 0 8px 24px -12px rgba(37, 99, 235, 0.25);
+            box-shadow: 0 8px 24px -12px rgba(212, 120, 159, 0.35);
             transform: translateY(-2px);
         }
 
@@ -339,7 +341,7 @@
             padding: 3px 8px;
             border-radius: 4px;
             background: var(--accent-soft);
-            color: var(--accent);
+            color: var(--accent-deep);
             letter-spacing: 0.02em;
         }
 
@@ -391,7 +393,7 @@
             gap: 6px;
             font-size: 0.82em;
             font-weight: 600;
-            color: var(--accent);
+            color: var(--accent-deep);
             text-decoration: none;
             letter-spacing: 0.02em;
             margin-top: 6px;
@@ -432,7 +434,7 @@
         .edu-year {
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.72em;
-            color: var(--muted);
+            color: var(--accent-deep);
             font-weight: 500;
         }
 
@@ -464,7 +466,7 @@
         @media print {
             body { background: #fff; padding: 0; font-size: 12px; }
             .page { box-shadow: none; max-width: 100%; }
-            .header { padding: 24px 32px; }
+            .header { padding: 24px 32px; background: #fff; }
             .body { padding: 20px 32px; }
             .project, .exp, .edu-item { break-inside: avoid; }
             .chip, .ptag { border: 1px solid var(--line); }
@@ -481,7 +483,7 @@
     <header class="header">
         <h1 class="name">Aqila <span>Putri</span></h1>
         <div class="role">
-            <span class="dot"></span> Software QA Engineer · Web, Mobile & Game Testing
+            <span class="dot"></span> Software QA Engineer · Web, Mobile &amp; Game Testing
         </div>
         <div class="contact">
             <a href="tel:+628889317373"><i class="fas fa-phone"></i> +62 888-9317-373</a>
